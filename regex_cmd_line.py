@@ -12,7 +12,7 @@ def ret_gex():
     fin = input('input file name')
     answer = input('final?')
     exp = input('input exp')
-    return fin,chra,exp
+    return fin,answer,exp
 def do_until(a=[]):
     fin,answer,exp=ret_gex()
     
