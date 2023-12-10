@@ -7,17 +7,18 @@ def build_lst(fout,exp):
         i += re.findall(exp,text)
         return i
 
-
 def ret_gex():
     fin = input('input file name')
     answer = input('final?')
     exp = input('input exp')
     return fin,answer,exp
+    
 def do_until(a=[]):
     fin,answer,exp=ret_gex()
     
     with open(fin,'r') as fout:
         if answer == 'y' or answer == 'yes':
+            a.append(build_lst(fout,exp))
             fout.close()
         else:
             a.append(build_lst(fout,exp))
